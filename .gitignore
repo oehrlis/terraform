@@ -1,0 +1,12 @@
+# Ignore local stuff
+soug_old
+o-sec-eus
+vcn
+
+# ignore MacOS fork files
+**/*.DS_Store
+
+# ignore Terraform related stuff e.g. env., state and provider information
+**/*.terraform
+**/*terraform.tfstate*
+**/*.env
