@@ -36,4 +36,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 [unreleased]: https://dev.azure.com/tvdvsts/six/_git/poc-cmu
-[0.0.1]: https://dev.azure.com/tvdvsts/six/_git/poc-cmu?version=GTv0.0.5
+[0.0.1]: https://github.com/oehrlis/terraform/releases/tag/v0.0.1
