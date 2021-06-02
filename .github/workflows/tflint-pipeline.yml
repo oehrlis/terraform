@@ -15,12 +15,12 @@ name: Terraform lint
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths-ignore:
       - '.github/**'
 
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
     paths-ignore:
       - '.github/**'
 
