@@ -1,0 +1,41 @@
+# ----------------------------------------------------------------------------
+# Trivadis AG, Infrastructure Managed Services
+# Saegereistrasse 29, 8152 Glattbrugg, Switzerland
+# ----------------------------------------------------------------------------
+# Name.......: tflint-pipeline.yaml 
+# Author.....: Stefan Oehrli (oes) stefan.oehrli@trivadis.com
+# Editor.....: Stefan Oehrli
+# Date.......: 2021.06.02
+# Revision...: 
+# Purpose....: Workflow to verify the Terraform code
+# Notes......: --
+# Reference..: https://github.com/DavidAnson/markdownlint
+# ----------------------------------------------------------------------------
+name: Terraform lint
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '.github/**'
+
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - '.github/**'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  delivery:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@main
+    - name: Lint Terraform
+      uses: actionshub/terraform-lint@main
+
+# --- EOF -------------------------------------------------------------------
